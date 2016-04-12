@@ -22,7 +22,7 @@ namespace GabBsb2016BackEnd.Controllers
         [HttpGet("event")]
         public IActionResult GetEvents()
         {
-            List<string> eventsInJson = new List<string>();
+            List<Event> eventsInJson = new List<Event>();
 
             try
             {
@@ -32,7 +32,7 @@ namespace GabBsb2016BackEnd.Controllers
 
                     foreach (var key in keys)
                     {
-                        eventsInJson.Add(redisClient.GetValueFromHash("events", key));
+                        eventsInJson.Add(JsonConvert.DeserializeObject<Event>(redisClient.GetValueFromHash("events", key)));
                     }
 
                     return Ok(eventsInJson);

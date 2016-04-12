@@ -24,7 +24,7 @@ namespace GabBsb2016BackEnd.Controllers
         {
             var hashKey = "events:" + eventKey + ":presentation";
 
-            List<string> presentationsInJson = new List<string>();
+            List<Presentation> presentationsInJson = new List<Presentation>();
 
             try
             {
@@ -34,7 +34,7 @@ namespace GabBsb2016BackEnd.Controllers
 
                     foreach (var key in keys)
                     {
-                        presentationsInJson.Add(redisClient.GetValueFromHash(hashKey, key));
+                        presentationsInJson.Add(JsonConvert.DeserializeObject<Presentation>(redisClient.GetValueFromHash(hashKey, key)));
                     }
 
                     return Ok(presentationsInJson);
