@@ -1,0 +1,41 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "GabBsb2016WebJobs Console Application",
+  "authors": [ "jroberto.araujo" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Microsoft.Extensions.Configuration.FileProviderExtensions": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
+    "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final"
+  },
+
+  "commands": {
+    "GabBsb2016WebJobs": "GabBsb2016WebJobs"
+  },
+
+  "frameworks": {
+    "dnx452": {
+      "dependencies": {
+        "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
+        "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final",
+        "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+        "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+        "Microsoft.Framework.DependencyInjection": "1.0.0-beta8",
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Console": "4.0.0-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Threading": "4.0.11-beta-23516",
+        "Microsoft.Azure.WebJobs": "1.1.1",
+        "GabBsb2016.Crosscutting": "1.0.0-*"
+      }
+    }
+  }
+}

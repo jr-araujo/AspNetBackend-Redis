@@ -1,4 +1,4 @@
-﻿namespace GabBsb2016BackEnd.Crosscutting.Configuration
+﻿namespace GabBsb2016.Crosscutting.Configuration
 {
     public class Redis
     {

@@ -1,8 +1,8 @@
-﻿using GabBsb2016BackEnd.Crosscutting.Configuration;
+﻿using GabBsb2016.Crosscutting.Configuration;
 using Microsoft.Extensions.OptionsModel;
 using ServiceStack.Redis;
 
-namespace GabBsb2016BackEnd.Crosscutting.Caching
+namespace GabBsb2016.Crosscutting.Caching
 {
     public class RedisConnectionManager
     {

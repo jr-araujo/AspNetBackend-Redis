@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.AspNet.Mvc;
-using GabBsb2016BackEnd.Crosscutting.Caching;
+using GabBsb2016.Crosscutting.Caching;
 using ServiceStack.Redis;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using GabBsb2016BackEnd.Model;
+using GabBsb2016.Crosscutting.Model;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 

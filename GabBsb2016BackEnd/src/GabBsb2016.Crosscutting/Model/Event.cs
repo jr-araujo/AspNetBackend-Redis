@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GabBsb2016BackEnd.Model
+namespace GabBsb2016.Crosscutting.Model
 {
     public class Event
     {
