@@ -17,35 +17,11 @@ namespace GabBsb2016WebJobs
 
         public void PersistPresentation(Presentation presentation)
         {
-            //try
-            //{
-                using (var redisClient = RedisManager.RedisConnection)
-                {
-                    if (redisClient.HashContainsEntry("events:" + presentation.EventName + ":presentation",
-                        presentation.Id.ToString()))
-                    {
-                        //return;
-                        //return HttpBadRequest(new
-                        //{
-                        //    Code = 409,
-                        //    Message = "Sorry :( - Already exists other presentation with same Id !"
-                        //});
-                    }
-
-                    redisClient.SetEntryInHash("events:" + presentation.EventName + ":presentation",
-                        presentation.Id.ToString(), JsonConvert.SerializeObject(presentation));
-
-                    //return Ok(presentation);
-                }
-            //}
-            //catch
-            //{
-            //    return HttpBadRequest(new
-            //    {
-            //        Code = 1001,
-            //        Message = "Sorry :( - An error ocurred when trying to retrieve the presentations."
-            //    });
-            //}
+            using (var redisClient = RedisManager.RedisConnection)
+            {
+                redisClient.SetEntryInHash("events:" + presentation.EventName + ":presentation",
+                    presentation.Id.ToString(), JsonConvert.SerializeObject(presentation));
+            }
         }
     }
 }
